@@ -1,6 +1,11 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
 export default defineConfig({
   plugins: [react()],
-  build: {
-    assetsInclude: ['**/*.png'], // Garante que PNGs sejam incluídos
-  },
+  resolve: {
+    alias: {
+      // Adicione aliases se necessário
+    }
+  }
 });
