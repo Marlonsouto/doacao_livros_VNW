@@ -1,5 +1,4 @@
-
-.conteinerQuerodoar{
+.conteinerQuerodoar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,19 +8,19 @@
     //border: #005695 solid;
 
 
-    h1{
+    h1 {
         display: flex;
         align-items: center;
         height: 10vh;
-       
+        text-align: center;
+
         //border: #005695 solid;
         //justify-content: center;
         //border: #005695 solid;
-        //text-align: center;
     }
 
 
-    .formulario{
+    .formulario {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -31,7 +30,7 @@
         border: solid #005695;
         border-radius: 20px;
 
-        input{
+        input {
             display: flex;
             text-align: start;
             height: 5vh;
@@ -45,26 +44,41 @@
 
             &:hover {
                 border-color: linear-gradient(90deg, #001b2f 0%, #005695 100%);
-                transform: scale(1.1); 
-              }
+                transform: scale(1.1);
+            }
         }
 
-        button{
+        button {
             justify-content: center;
             width: 50%;
             color: aliceblue;
             background-color: #005695;
             border-radius: 10px;
-            height: 5vh;
-            cursor: pointer; 
-              
+            height: 8vh;
+            font-size: 20px;
+            cursor: pointer;
+
 
             &:hover {
-                transform: scale(0.95); 
-              }
+                transform: scale(0.95);
+            }
         }
 
+    }
 
+
+    @media (max-width: 768px) {
+        .conteinerQuerodoar {
+            width: 90%;
+        }
+
+        .formulario {
+            width: 90%;
+
+            img {
+                width: 80%;
+            }
+        }
 
     }
 }
