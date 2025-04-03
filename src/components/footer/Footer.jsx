@@ -5,9 +5,9 @@ import linkedin from '../../assets/IconesFooter/linkedin.png'
 import instagram from '../../assets/IconesFooter/instagram.png'
 import footerStyle from './footer.module.scss'
 
-export default function Footer(){
-    return(
-        
+export default function Footer() {
+    return (
+
         <section >
             <section className={footerStyle.contatos}>
                 <p>4002-8922</p>
@@ -15,23 +15,20 @@ export default function Footer(){
                 <nav className={footerStyle.navFooter}>
                     <ul>
                         <li>
-                            <a ><img href='' src={facebook} alt="icone facebook" /></a>
+                            <a href="#"><img src={facebook} alt="icone facebook" /></a>
                         </li>
-                            <a ><img href='' src={twitter} alt="icone twitter" /></a>
-                            
                         <li>
-                            <a ><img href='' src={youtube} alt="icone youtube" /></a>   
+                            <a href="#"><img src={twitter} alt="icone twitter" /></a>
                         </li>
-
                         <li>
-
-                            <a ><img href='' src={linkedin} alt="icone linkedin" /></a>
+                            <a href="#"><img src={youtube} alt="icone youtube" /></a>
                         </li>
-                            
                         <li>
-                            <a ><img href='' src={instagram} alt="icone instagram" /></a>
-                        </li>    
-                        
+                            <a href="#"><img src={linkedin} alt="icone linkedin" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src={instagram} alt="icone instagram" /></a>
+                        </li>
                     </ul>
                 </nav>
             </section>

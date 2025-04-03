@@ -12,7 +12,7 @@ export default function LivrosDoados() {
 
         <section className={styleLivrosDoados.livro}>
 
-          <img src={livroVermelho} alt="imagem de um livro " />
+          <img src={livroVermelho} alt="imagem de um livro  " />
           <p>O protagonista</p>
           <p>Susanne Andrade</p>
           <p>Ficção</p>
