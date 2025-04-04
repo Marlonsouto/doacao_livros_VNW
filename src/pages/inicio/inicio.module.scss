@@ -1,69 +1,100 @@
-.conteinerInicio{
+.conteinerInicio {
     display: flex;
-    background-repeat: no-repeat;
     justify-content: space-between;
     height: 80vh;
     background-image: url('../../assets/pessoaComLivros.png');
-    //background-size: contain;
-    //background-size: cover;
-    background-size: 100% 80vh ;
+    background-size: 100% 100%; 
     background-repeat: no-repeat;
+    background-position: center;
     align-items: center;
-   
-    h1{
-        border: none;
-        color: aliceblue;
-        font-size: 32px;
-        width: 30%;
-        justify-content: center;
-        padding-left: 40px ;
-        font-style: Roboto;
-    }   
-}
-
-.cardsMain{
-    display: colum;
-    //justify-content: space-between;
-    //align-items: center;
-    //width: 20%;
-    
-    h1{
-        display: flex;
-        align-items: center;
-        //justify-content:flex-start;
-        font-size: 40px;
-        width: 100%;
-        color: #005695;
-        height: 30vh;
-        //border:solid tomato;
-        padding-left: 2%;
+    position: relative;
+  
+    h1 {
+      border: none;
+      color: aliceblue;
+      font-size: 32px;
+      width: 30%;
+      padding-left: 40px;
+      font-family: 'Roboto', sans-serif;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
     }
-}
-
-.sectionCards{
-    display: flex;
-    justify-content: space-around ;
-}
-
-
-.cardInformativo{
+  
+    @media (max-width: 1024px) {
+      background-size: cover; 
+      h1 {
+        font-size: 28px;
+        width: 40%;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      h1 {
+        width: 50%;
+        padding-left: 20px;
+        font-size: 24px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      justify-content: center;
+      h1 {
+        width: 80%;
+        padding: 0;
+        text-align: center;
+        //background-color: rgba(0, 27, 47, 0.5); /* Fundo semitransparente para legibilidade */
+        padding: 15px;
+        border-radius: 10px;
+      }
+    }
+  }
+  
+  
+  .cardsMain {
     display: flex;
     flex-direction: column;
-    //padding-top: 15px;
+    width: 100%;
+  
+    h1 {
+      display: flex;
+      align-items: center;
+      font-size: 40px;
+      width: 100%;
+      color: #005695;
+      height: 30vh;
+      padding-left: 2%;
+    }
+  }
+  
+  .sectionCards {
+    display: flex;
+    justify-content: space-around;
+    
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+  
+  .cardInformativo {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #0157944D;
     width: 20%;
     height: 50vh;
     border-radius: 5%;
     justify-content: space-evenly;
-    //justify-content: space-around ; 
-
-    p{
-        //width: 90%;
-        //justify-content: space-evenly;
-        align-items: center;
-        font-size: 22px;
-        text-align: center;
+  
+    p {
+      font-size: 22px;
+      text-align: center;
     }
-   
-}
+  
+    @media (max-width: 480px) {
+      width: 80%;
+      height: auto;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+  }

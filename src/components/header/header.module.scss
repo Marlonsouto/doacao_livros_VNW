@@ -1,88 +1,136 @@
-.conteinerHeader{
+.conteinerHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, #001b2f 0%, #005695 100%);
     cursor: default;
-    height: 15vh;
+    min-height: 15vh;
+    padding: 0 20px;
     
-}
-
-
-.imagelogoLivro{
+    @media (max-width: 1024px) {
+      flex-direction: column;  
+      padding: 0 15px;
+      justify-content: space-around;
+    }
+  }
+  
+  .imagelogoLivro {
     display: flex;
-    width: 20%;
+    width: auto;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 15px;
     
     h2 {
-        color: #FFF;
-        justify-content: center;
-        cursor: default;
-        //font-size: 20px;
-        
+      color: #FFF;
+      cursor: default;
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      white-space: nowrap;
+      
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+      }
     }
     
-}
-
-.navHeader{
-    width: 30%;
-
-    ul{
-        display: flex;
-        color: #FFF;
-        justify-content: space-around;
-        
+    @media (max-width: 480px) {
+      gap: 10px;
+      
+      h2 {
+        font-size: 1rem;
+      }
     }
-}
-
-.link{
+  }
+  
+  .navHeader {
+    ul {
+      display: flex;
+      color: #FFF;
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      
+      @media (max-width: 1024px) {
+        gap: 20px;
+      }
+      
+      @media (max-width: 768px) {
+        gap: 15px;
+      }
+    }
+  }
+  
+  .link {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
-
-}
-
-.link:hover{
-
-}
-
-
-
-.areaDeProcura{
-    display: flex;
-    border: solid #fff;
-    width: 20%;
-    border-radius: 20px;
-    margin-right: 1%;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 6vh;
-   
-
-    input {
-        background-color: transparent;
-        border: none;
-        width:80%;
-        height: 6vh;
-        outline: none;
-        caret-color: #FFF;
-        
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    transition: opacity 0.2s;
     
-        &::placeholder {
-            display: flex;
-            color: #fff;
-            font-size: 15px;
-            justify-content: space-around;
-            
-        }
+    &:hover {
+      opacity: 0.8;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .areaDeProcura {
+    display: flex;
+    border: 1px solid #fff;
+    min-width: 200px;
+    width: 25%;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: 6vh;
+    min-height: 40px;
+    padding: 0 15px;
+    
+    input {
+      background-color: transparent;
+      border: none;
+      width: 80%;
+      height: 100%;
+      outline: none;
+      caret-color: #FFF;
+      color: #fff;
+      
+      &::placeholder {
+        color: #fff;
+        font-size: clamp(0.7rem, 1vw, 0.9rem);
+        opacity: 0.8;
       }
-    button{
-        background: transparent;
-        border: none;
-        height: 4vh;
-        cursor: pointer;
-        
-    }  
-}
-
+    }
+    
+    button {
+      background: transparent;
+      border: none;
+      height: 60%;
+      cursor: pointer;
+      
+      img {
+        height: 100%;
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      display: none;  
+      width: 30%;
+      padding: 0 10px;
+    }
+    
+    @media (max-width: 768px) {
+      width: 35%;
+      min-width: 180px;
+    }
+    
+    @media (max-width: 480px) {
+      width: 40%;
+      min-width: 150px;
+      padding: 0 8px;
+      
+      input::placeholder {
+        font-size: 0.7rem;
+      }
+    }
+  }

@@ -12,16 +12,16 @@ export default function LivrosDoados() {
     try {
       const livrosEncontrados = await axios.get('https://api-livros-2hzy.onrender.com/livros')
 
-      if (livrosEncontrados.data && livrosEncontrados.data.lenght > 0)
+      if (livrosEncontrados.data && livrosEncontrados.data.length > 0)
         setLivros(livrosEncontrados.data)
       else {
         console.error("Nao ha livros registrados ")
-        alert( 'Busca nao encontrada'+error.message)  
+        setLivros([])  
       }
     } catch (error) {
-      alert(error.message)
-    }
+      alert( 'Busca nao encontrada'+ error.message)    }
   }
+  
 
   useEffect(() => {
     receberLivros()
@@ -38,12 +38,11 @@ export default function LivrosDoados() {
 
         {
           livros.map((livro) => (
-
             <section className={styleLivrosDoados.livro}>
-              <img src= {} alt="imagem de um livro " />
-              <p>O protagonista</p>
-              <p>Susanne Andrade</p>
-              <p>Ficção</p>
+              <img src= {livro.image_url} alt={'capa do livro ${livro.titulo}'} />
+              <p>{livro.titulo}</p>
+              <p>{livro.autor}</p>
+              <p>{livro.categoria}</p>
             </section>
           ))}
 
